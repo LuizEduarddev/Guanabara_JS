@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title> 
+            Aula Guanabara
+        </title>
+        <style>
+            body
+            {
+                background-color:rgb(114, 102, 102);
+                color: beige;
+                font: normal 20pt Arial;
+            }
+            p
+            {
+                color: black;
+                font: normal 40pt Arial;
+            }
+        </style>
+    </head>
+
+    <body> 
+        <script>
+            var frase = window.prompt('Digite uma frase: ');
+            var tamanho_frase = frase.length;
+            window.alert(`A frase '${frase}' tem um tamanho de ${tamanho_frase}`);
+            /*
+                Caso eu queria por exemplo deixar todas as letras maisuculas
+                eu usaria a funcao nome_da_string.toUpperCase()
+                ------------------------------------------------------------
+                Caso eu quisesse deixar tudo em minusuculo
+                eu usaria a funcao nome_da_string.toLowerCase()
+            */
+           document.write('Assim ficaria caso a frase fosse toda em maiuscula '+ '<strong>' + frase.toUpperCase() + '</strong>' + '<br>');
+           document.write('Assim ficaria caso a frase fosse toda em minuscula ' + '<strong>' + frase.toLowerCase() + '</strong>' + '<br>');
+           document.write(`<h1>A frase ${frase} tem um tamanho de ${tamanho_frase} letras.</h1>`);
+        </script>
+        <h1>
+            Ola, mundo!
+            <hr>
+        </h1>
+        <p>
+            Ola, 
+            <b>
+            
+            </b> 
+            :D
+        </p>
+    </body>
+</html>

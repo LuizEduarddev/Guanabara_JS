@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title> 
+            Aula Guanabara
+        </title>
+        <style>
+            body
+            {
+                background-color:rgb(114, 102, 102);
+                color: beige;
+                font: normal 20pt Arial;
+            }
+            p
+            {
+                color: black;
+                font: normal 40pt Arial;
+            }
+        </style>
+    </head>
+
+    <body> 
+        <script>
+           window.alert('Para ingressar neste site eh preciso do seu telefone');
+           var telefone1 = window.prompt('Digite seu numero');
+           var telefone2 = window.prompt('Digite o segundo numero');
+           var confirmacao = window.confirm('Os numeros: ' + telefone1 + 'e ' + telefone2 + 'Estao corretos?');
+           while (confirmacao == false)
+           {
+                telefone1 = window.prompt('Digite seu numero');
+                confirmacao = window.confirm('Os numeros: ' + telefone1 + 'e ' + telefone2 + 'Estao corretos?');
+           }
+        </script>
+        <h1>
+            Ola, mundo!
+            <hr>
+        </h1>
+        <p>
+            Ola, 
+            <b>
+            
+            </b> 
+            :D
+        </p>
+    </body>
+</html>

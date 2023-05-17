@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title> 
+            Aula Guanabara
+        </title>
+        <style>
+            body
+            {
+                background-color:rgb(114, 102, 102);
+                color: beige;
+                font: normal 20pt Arial;
+            }
+            p
+            {
+                color: rgb(221, 12, 211);
+                font: normal 40pt Arial;
+            }
+        </style>
+    </head>
+
+    <body> 
+        <script>
+            var n1 = parseInt(window.prompt('Digite o primeiro numero: '));
+            var n2 = parseInt(window.prompt('Digite o segundo numero: '));
+            var soma = n1 + n2 
+            /*
+                Assim como no python, o JS nao pede por padrao para
+                identificarmos uma variavel, por exemplo
+                na linguagem C antes do nome da variavel
+                e preciso selecionar o tipo, por exemplo
+                'int nome'
+                Enquanto no python e JS, as variaveis nao tem tipo por padrao
+                entao neste caso o que deve ser feito e fazer uma conversao de tipo
+                usando a funcao
+                parseInt(nome_da_variavel) para inteiro
+                parseFloat(nome_da_variavel) para float
+                E sim, o 'Float' e o 'Int' devem comecar com letra maiuscula
+            */
+            window.alert(`A Soma de ${n1} + ${n2} eh igual a ${soma}`);
+            /*
+                Algo interessante a ser analisado eh, tanto no python como no javaScript
+                o '+' pode ser usado tanto para concatencao, quanto para adicao
+                OBS: O curioso eh, a funcao 'window.prompt' 
+                sempre retorna uma string para o computador
+                independente se o que foi digitado foi um numero ou uma frase
+                o JS sempre retornara por padrao como uma string.
+            */
+
+            /*
+                Outra coisa que e interessante tambem eh, para passarmos de um numero para
+                uma string usamos a funcao
+                string(nome_da_variavel)
+                ou
+                nome_da_variavel.tostring()
+            */
+
+            /*
+                Assim como em python, podemos usar strings formatadas
+                como assim?
+                Para facilitar a escrita, ao inves de termos que fazer
+                'A soma de ' + n1 + ' mais ' + n2 + ' e igual a ' + soma
+                
+                podemos fazer assim
+                usando a crase
+                `A soma de ${nome_da_variavel} mais ${nome_da_variavel} e igual a ${nome_da_variavel}`
+            */
+        </script>
+        <h1>
+            Ola, mundo!
+            <hr>
+        </h1>
+        <p>
+            Ola, 
+            <b>
+            
+            </b> 
+            :D
+        </p>
+    </body>
+</html>
