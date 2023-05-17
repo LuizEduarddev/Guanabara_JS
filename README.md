@@ -1,1 +1,1 @@
-# Guanabara_JS
+Aprendendo JavaScript pelo curso do guanabara.
