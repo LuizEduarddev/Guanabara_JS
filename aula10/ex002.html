@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SOMA!</title>
+        <style>
+            div#area
+            {
+                font: normal 30pt Arial;
+                color:rgb(255, 255, 255);
+                background: rgb(122, 64, 64);
+                width: 1300px;
+                height:500px;
+                line-height: 500px;
+                text-align: center;
+            }
+            
+            body
+            {
+                background: rgb(0, 0, 0);
+                color: white;
+            }
+
+            input#question_box
+            {
+                font: normal 30pt Arial;
+                color: rgb(180, 16, 16);
+                background: white;
+                width: 492px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+            }
+
+            input#question_box2
+            {
+                font: normal 30pt Arial;
+                color: rgb(180, 16, 16);
+                background: white;
+                width: 492px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+            }
+
+            input#question_box3
+            {
+                font: normal 30pt Arial;
+                color: rgb(180, 16, 16);
+                background: white;
+                width: 50;
+                height: 110px;
+                line-height: 100px;
+                text-align: center;
+            }
+
+            h1
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            Somando Valores em JS!
+        </h1>
+        <div id="area">
+            <b>Interagir...</b>
+        </div>
+
+        <input type="number" name="txtn1" id="question_box"> 
+        <input type="number" name="txtn2" id="question_box2">
+        <input type="button" name="txtn2" id="question_box3" value="Digite algo">
+
+        <div id='soma'>
+            O resultado é...
+        </div>
+
+        <script>
+            var pega_id = document.getElementById("area");
+            var n3 = document.getElementById("question_box3");
+
+            n3.addEventListener('click', somar);
+            pega_id.addEventListener('mouseenter', entrar);
+            pega_id.addEventListener('mouseout', sair);
+            
+            function entrar()
+            {
+                var r1 = Math.random() * 255;
+                var r2 = Math.random() * 255;
+                var r3 = Math.random() * 255;
+                
+                var pega_area = document.getElementById("area");
+                pega_area.style.background = `rgb(${r1}, ${r2}, ${r3})`
+                pega_area.innerText = 'Ola tudo bem?'
+            }
+            
+            function sair()
+            {
+                var r1 = Math.random() * 255;
+                var r2 = Math.random() * 255;
+                var r3 = Math.random() * 255;
+                
+                var pega_area = document.getElementById("area");
+                pega_area.style.background = `rgb(${r1}, ${r2}, ${r3})`
+                pega_area.innerText = 'Ja vai? :('
+            }
+
+            function somar()
+            {
+                var n1 = document.getElementById("question_box");
+                var n2 = document.getElementById("question_box2");
+                let res = document.getElementById('soma');
+                let numero1 = Number(n1.value);
+                let numero2 = Number(n2.value);
+                let resultado = numero1 + numero2;
+                
+                res.innerHTML = `O resultado é ${resultado}`;
+            }
+
+        </script>
+    </body>
+</html>

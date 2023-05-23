@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        USANDO O DOM
+    </title>
+    <style>
+        body
+        {
+            background-color: rgb(54, 87, 233);
+            color:white;
+            font:normal 20pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        PRIMEIRO EXERCICIO COM O DOM
+    </h1>
+    <p>
+        Aprendendo a usar o <strong>DOM </strong> em JS.
+    </p>
+    <div id='Sexo'>
+        !try click here!
+    </div>
+    <script>
+        var paragrafos = document.getElementsByTagName('p')[0];
+        var cor_texto_paragrafo = paragrafos.style.background;
+        document.write(`A tag 'P' esta escrita assim: ${paragrafos.innerText}`);
+        var div_id = document.getElementById('Sexo');
+        div_id.style.background = 'green';
+        window.alert(div_id.innerText);
+    </script>
+</body>
+
+</html> 

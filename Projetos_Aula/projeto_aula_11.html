@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Velocímetro</title>
+        
+        <style>
+            input#botao_acelerar {
+                background: green;
+                color: black;
+                font: normal 20pt Arial;
+                width: 500px;
+                height: 500px;
+                font-weight: 500px;
+                text-align: center;
+            }
+
+            input#botao_frear {
+                background: red;
+                color: black;
+                font: normal 20pt Arial;
+                width: 500px;
+                height: 500px;
+                text-align: center;
+            }
+
+            .velocimetro {
+                width: 300px;
+                height: 300px;
+                border: 10px solid black;
+                border-radius: 50%;
+                position: relative;
+                margin: 50px auto;
+                overflow: hidden;
+            }
+
+            .ponteiro {
+                width: 4px;
+                height: 150px;
+                background: red;
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+                transform-origin: bottom center;
+                transition: transform 0.5s;
+                transform: translate(-50%, 0%) rotate(0deg);
+            }
+
+            .marcador {
+                position: absolute;
+                width: 2px;
+                height: 10px;
+                background: black;
+                left: 50%;
+                bottom: 0;
+                transform-origin: bottom center;
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            .marcador.marcador-0 {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            .marcador.marcador-30 {
+                transform: translateX(-50%) rotate(30deg);
+            }
+
+            .marcador.marcador-60 {
+                transform: translateX(-50%) rotate(60deg);
+            }
+
+            /* ... adicione os estilos para os outros marcadores ... */
+
+            .marcador.marcador-240 {
+                transform: translateX(-50%) rotate(240deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="button" id="botao_acelerar" value="Pressione para acelerar">
+        <input type="button" id="botao_frear" value="Pressione para frear">
+
+        <div class="velocimetro">
+            <div class="ponteiro"></div>
+
+            <div class="marcador marcador-0"></div>
+            <div class="marcador marcador-30"></div>
+            <div class="marcador marcador-60"></div>
+            <!-- Adicione os outros marcadores de acordo com os ângulos -->
+
+            <div class="marcador marcador-240"></div>
+        </div>
+
+        <script>
+            let velocidade = 0;
+            let botao_acelerar = document.getElementById("botao_acelerar");            
+            let botao_frear = document.getElementById("botao_frear");
+            let ponteiro = document.querySelector(".ponteiro");
+            
+            botao_acelerar.addEventListener('mousedown', function() {
+                velocidade = acelerar(velocidade);
+                atualizarVelocimetro(velocidade);
+            });
+
+            botao_frear.addEventListener('mousedown', function() {
+                velocidade = frear(velocidade);
+                atualizarVelocimetro(velocidade);
+            });
+
+            function acelerar(velocidade) {
+                velocidade += 10;
+                if (velocidade > 240) {
+                    velocidade = 240;
+                }
+                return velocidade;
+            }
+
+            function frear(velocidade) {
+                velocidade -= 10;
+                if (velocidade < 0) {
+                    velocidade = 0;
+                }
+                return velocidade;
+            }
+
+            function atualizarVelocimetro(velocidade) {
+                let angulo = (velocidade / 240) * 240;
+
+                ponteiro.style.transform = `translate(-50%, 0%) rotate(${angulo}deg)`;
+            }
+        </script>
+    </body>
+</html>
