@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LOL.adivinhe
+        </title>
+
+        <style>
+            body
+            {
+                background: white;
+                color:black;
+                font:normal 20pt Arial;
+            }
+            h1#pronto
+            {
+                background: black;
+                color:white;
+                font:normal 20pt Arial;
+                width: 100%;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+            }
+            input#play_audio
+            {
+                background-color: rgb(15, 119, 87);
+                color: white;
+                font:normal 30pt Arial;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+            img#Yummi_img
+            {
+                width: 33%;
+                height: 500px;
+            }
+            img#Yasuo_img
+            {
+                width: 33%;
+                height: 500px;
+            }
+            img#Aphelios_img
+            {
+                width: 33%;
+                height: 500px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="cabecalho">
+            <h1 id="pronto"> Pronto para começar? </h1>
+            <input type = 'button' id ='play_audio' value="clique para emitir o som">
+            <img src="Imagens_Personagens/Aphelios.png" alt="Imagem_Aphelios" id="Aphelios_img">
+            <img src="Imagens_Personagens/Yasuo.png" alt="Imagem_Yasuo" id="Yasuo_img">
+            <img src="Imagens_Personagens/Yuumi.png" alt="Imagem_Yummi" id="Yummi_img">
+            <p id="acertou"> E voce ......</p>
+        </div>
+        <script src="funcoes.js"></script>
+    </body>
+</html>
